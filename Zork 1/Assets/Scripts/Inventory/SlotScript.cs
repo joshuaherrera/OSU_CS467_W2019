@@ -98,18 +98,16 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
     //since it is in our slot script, it has a click function
     public void OnPointerClick(PointerEventData eventData)
     {
-        //Debug.Log("POINTER EVENT CAPTURED");
+        Debug.Log("POINTER EVENT CAPTURED");
         //inventory script slots call this.
         if (eventData.button == PointerEventData.InputButton.Right)
         {
             UseItem();
         }
-        /*
-        if (eventData.button == PointerEventData.InputButton.Left)
+        /*else if (eventData.button == PointerEventData.InputButton.Left)
         {
            RemoveItem();
-        }
-        */
+        }*/
     }
 
     public void UseItem()
