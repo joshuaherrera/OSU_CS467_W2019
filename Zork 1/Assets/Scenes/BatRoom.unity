@@ -406,6 +406,91 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!1001 &844265241
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4730729632511533484, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: m_Name
+      value: Pickups
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730729632511533485, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730729632511533485, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730729632511533485, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730729632511533485, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730729632511533485, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730729632511533485, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730729632511533485, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730729632511533485, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730729632511533485, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730729632511533485, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730729632511533485, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7280960490989303471, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: m_Name
+      value: Jade Figurine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7280960490989303468, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300282, guid: f36fcce75db61c64199e9c1439f6f554,
+        type: 3}
+    - target: {fileID: 9196672104330953931, guid: 402402788233c4044a776698dbd9974e,
+        type: 3}
+      propertyPath: itemType
+      value: Figurine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 402402788233c4044a776698dbd9974e, type: 3}
 --- !u!1001 &1087694156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -736,6 +821,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445033388639933729, guid: d0e83dc4d0b4a91449856f3da7c8d322,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 445033388639933729, guid: d0e83dc4d0b4a91449856f3da7c8d322,
         type: 3}
@@ -47993,38 +48083,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7302191688881688162, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690490760781, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: areaText.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690490760781, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: areaText.Array.data[0]
-      value: You are in a small room which has doors only to the east and south.  In
-        the corner of the room on the ceiling is a large vampire bat who is obviously
-        deranged and holding his nose.  There is an exquisite jade figurine here.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6837378483247712437, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
         type: 3}
       propertyPath: m_Name
@@ -48088,6 +48146,46 @@ PrefabInstance:
     - target: {fileID: 6837378483870045159, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7302191688881688162, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7302191688881688162, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -48229,6 +48327,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437384238014829113, guid: 0b47a2ee0abd7904e8cd407b612e575b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8437384238014829113, guid: 0b47a2ee0abd7904e8cd407b612e575b,
         type: 3}

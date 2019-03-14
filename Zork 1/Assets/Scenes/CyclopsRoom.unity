@@ -30328,39 +30328,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7302191688881688162, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690490760781, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: areaText.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690490760781, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: areaText.Array.data[0]
-      value: This room has an exit on the northwest, and a staircase leading up.  A
-        cyclops, who looks prepared to eat horses (much less mere adventurers), blocks
-        the staircase. From his state of health, and the bloodstains on the walls,
-        you gather that he is not very friendly, though he likes people.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6837378483247712437, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
         type: 3}
       propertyPath: m_Name
@@ -30424,6 +30391,26 @@ PrefabInstance:
     - target: {fileID: 6837378483870045159, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7302191688881688162, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

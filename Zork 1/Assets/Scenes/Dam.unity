@@ -112,115 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &83682333
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7302191690592114522, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_Name
-      value: Console_UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690592114521, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 276.70618
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690592114521, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 202.43494
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690592114521, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.71982
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690592114521, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690592114521, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690592114521, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690592114521, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690592114521, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690592114521, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690592114521, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690592114521, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191688881688162, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690490760781, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: areaText.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690490760781, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: areaText.Array.data[0]
-      value: 'You are standing on the top of the Flood Control Dam #3, which was quite
-        a tourist attraction in times far distant. There are paths to the north, south,
-        and west, and a scramble down.  The sluice gates on the dam are closed. Behind
-        the dam, there can be seen a wide reservoir. Water is pouring over the top
-        of the now abandoned dam.  There is a control panel here, on which a large
-        metal bolt is mounted. Directly above the bolt is a small green plastic bubble.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191689838860559, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -19.549908
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 789fd7a3c47ac0f48988bf24cfc6da3b, type: 3}
 --- !u!1001 &972294691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29313,6 +29204,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8437384238014829255, guid: 0b47a2ee0abd7904e8cd407b612e575b,
+        type: 3}
+      propertyPath: theMap
+      value: 
+      objectReference: {fileID: 1946082665}
+    - target: {fileID: 8437384238014829255, guid: 0b47a2ee0abd7904e8cd407b612e575b,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 972294692}
     - target: {fileID: 8437384238014829254, guid: 0b47a2ee0abd7904e8cd407b612e575b,
         type: 3}
       propertyPath: m_BackGroundColor.r
@@ -29328,15 +29229,5 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.b
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8437384238014829255, guid: 0b47a2ee0abd7904e8cd407b612e575b,
-        type: 3}
-      propertyPath: theMap
-      value: 
-      objectReference: {fileID: 1946082665}
-    - target: {fileID: 8437384238014829255, guid: 0b47a2ee0abd7904e8cd407b612e575b,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 972294692}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b47a2ee0abd7904e8cd407b612e575b, type: 3}

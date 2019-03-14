@@ -533,11 +533,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8437384238014829254, guid: 0b47a2ee0abd7904e8cd407b612e575b,
-        type: 3}
-      propertyPath: orthographic size
-      value: 4.741884
-      objectReference: {fileID: 0}
     - target: {fileID: 8437384238014829255, guid: 0b47a2ee0abd7904e8cd407b612e575b,
         type: 3}
       propertyPath: theMap
@@ -548,6 +543,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1492523586}
+    - target: {fileID: 8437384238014829254, guid: 0b47a2ee0abd7904e8cd407b612e575b,
+        type: 3}
+      propertyPath: orthographic size
+      value: 4.741884
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b47a2ee0abd7904e8cd407b612e575b, type: 3}
 --- !u!1001 &1146570187
@@ -600,7 +600,7 @@ PrefabInstance:
     - target: {fileID: 1786172555345018300, guid: df9b7ce7b131fa84e9885efec4ccf3a7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1786172555345018300, guid: df9b7ce7b131fa84e9885efec4ccf3a7,
         type: 3}
@@ -701,37 +701,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7302191688881688162, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690490760781, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: areaText.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302191690490760781, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: areaText.Array.data[0]
-      value: This is a rather wide room. On one side is the bottom of a narrow wooden
-        ladder. To the west and the south are passages leaving the room.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6837378483247712437, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
         type: 3}
       propertyPath: m_Name
@@ -797,6 +766,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7302191688881688162, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983686744207260973, guid: 789fd7a3c47ac0f48988bf24cfc6da3b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 789fd7a3c47ac0f48988bf24cfc6da3b, type: 3}
 --- !u!1001 &1803343323
@@ -849,7 +838,7 @@ PrefabInstance:
     - target: {fileID: 899317767601402759, guid: 4f8b76d2ab3a74c489a979bd8c214779,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 899317767601402759, guid: 4f8b76d2ab3a74c489a979bd8c214779,
         type: 3}
