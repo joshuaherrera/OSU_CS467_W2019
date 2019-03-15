@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
      //currently unused, if we want to save upon exiting to main menu add above load Main Menu
      public SaveManager SaveToMain;
 
-     public 
+     public bool canMove = true;
 
      // Start is called before the first frame update
     void Start()
@@ -39,7 +39,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
+		if (canMove)
+		{
+			theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
+		}
+		else
+		{
+			theRB.velocity = Vector2.zero;
+		}
 
          myAnim.SetFloat("moveX", theRB.velocity.x);
          myAnim.SetFloat("moveY", theRB.velocity.y);
@@ -57,7 +64,7 @@ public class PlayerController : MonoBehaviour
               // add save here if we want to save every time we exit to main
               // not enabled currently so saving in a conscious player effort
               // also this way we don't save over something without player knowledge
-              SaveToMain.Save();
+              //SaveToMain.Save();
               SceneManager.LoadScene(mainMenuScene);
          }
 

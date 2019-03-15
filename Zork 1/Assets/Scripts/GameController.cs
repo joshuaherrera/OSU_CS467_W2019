@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
 
+	public static GameController instance;
 	public Text displayText;
 	public InputAction[] inputActions;
 	public string[] areaText;
@@ -16,7 +17,11 @@ public class GameController : MonoBehaviour
 	public int roomTextSelector = 0;
 	public ScrollRect myScrollRect;
 	public Scrollbar newScrollBar;
+	public BattleManager battle;
 	public GameObject UI_Console;
+	public GameObject Managers;
+	public CharStats playerStats;
+	public int typeOfEnemy = 0;
 
 	//[HideInInspector]
 	//public RoomNavigation roomNavigation;
@@ -34,6 +39,7 @@ public class GameController : MonoBehaviour
 
 	void Start()
 	{
+		instance = this; 
 		if (roomToggle == 0)
 		{
 			DisplayRoomText();
@@ -73,16 +79,6 @@ public class GameController : MonoBehaviour
 	void Update()
 	{
 
-		if (Input.GetKey(KeyCode.Minus))
-		{
-			UI_Console.SetActive(false);
-		}
-
-		if (Input.GetKey(KeyCode.Equals))
-		{
-			UI_Console.SetActive(true);
-			textInput.Select();
-		}
 		if (Input.GetKey(KeyCode.Minus))
 		{
 			UI_Console.SetActive(false);

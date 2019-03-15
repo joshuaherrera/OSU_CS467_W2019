@@ -221,8 +221,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8796120413235767315}
   m_HandleRect: {fileID: 2983686744207260973}
   m_Direction: 2
-  m_Value: 0.99999785
-  m_Size: 0.86209923
+  m_Value: 0.99999905
+  m_Size: 0.79854596
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1028,6 +1028,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5a75e1da2e0fb3143a58069b2f77c3e2, type: 2}
   - {fileID: 11400000, guid: 1aea8758188611a42bb25b57739632c2, type: 2}
   - {fileID: 11400000, guid: b69f61fd50394034e89d4d4359c9ba1d, type: 2}
+  - {fileID: 11400000, guid: 9bca2c5a4b6017d4f96725b063684e63, type: 2}
   areaText: []
   dialogBox: {fileID: 7302191688982587112}
   textInput: {fileID: 7302191690146710127}
@@ -1036,9 +1037,12 @@ MonoBehaviour:
   roomTextSelector: 0
   myScrollRect: {fileID: 2622808606071334473}
   newScrollBar: {fileID: 586925476915583381}
-  battle: {fileID: 0}
+  battle: {fileID: 2377173046958683781, guid: 8ff09c605128e19429cfbe00608b6d6d, type: 3}
   UI_Console: {fileID: 7302191689538304041}
-  UI_Toggle: 1
+  Managers: {fileID: 0}
+  playerStats: {fileID: 5155322941674546733, guid: 36963e64aaac1d74994a31a939500360,
+    type: 3}
+  typeOfEnemy: 0
   interactionDescriptionsInRoom: []
 --- !u!114 &7302191690490760782
 MonoBehaviour:

@@ -964,6 +964,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameScene: OutsideHouse
+  fileName: save0
+  fileExtension: .dat
+  continueButton: {fileID: 1952782557}
   loadSave: {fileID: 1568845970}
 --- !u!114 &1568845970
 MonoBehaviour:

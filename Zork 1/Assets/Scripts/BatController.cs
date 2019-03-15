@@ -41,7 +41,7 @@ public class BatController : MonoBehaviour
      // Start is called before the first frame update
      void Start()
      {
-          int batKills = PlayerPrefs.GetInt("cyclops_deaths", 15);
+          int batKills = PlayerPrefs.GetInt("bat_deaths", 15);
           if (batKills == 0)
           {
                batRB2D = GetComponent<Rigidbody2D>();
@@ -68,7 +68,7 @@ public class BatController : MonoBehaviour
      {
 
           hittingWall = Physics2D.OverlapCircle(wallCheck.position, wallCheckRadius, whatIsWall);
-          hittingPlayer = Physics2D.OverlapCircle(playerCheck.position, playerCheckRadius, whatIsPlayer);
+  
           if (hittingWall)
           {
                moveDirection = new Vector3(Random.Range(-1f, 1f) * moveSpeed, Random.Range(-1f, 1f) * moveSpeed,
@@ -77,22 +77,14 @@ public class BatController : MonoBehaviour
                isMoving = true;
                timeToMoveCounter = Random.Range(timeToMove * .025f, timeToMove * 1.75f);
           }
-          else if (hittingPlayer)
-          {
-               batRB2D.velocity = Vector2.zero;
-               myBatAnim.SetFloat("moveX", batRB2D.velocity.x);
-               myBatAnim.SetFloat("moveY", batRB2D.velocity.y);
-               isMoving = false;
-               timeBetweenMoveCounter = 1;
-          }
           if (isMoving)
           {
                timeToMoveCounter -= Time.deltaTime;
                batRB2D.velocity = moveDirection;
                myBatAnim.SetFloat("moveX", batRB2D.velocity.x);
                myBatAnim.SetFloat("moveY", batRB2D.velocity.y);
-               myBatAnim.SetFloat("lastMoveX", batRB2D.velocity.x);
-               myBatAnim.SetFloat("lastMoveY", batRB2D.velocity.y);
+               myBatAnim.SetFloat("LastMoveX", batRB2D.velocity.x);
+               myBatAnim.SetFloat("LastMoveY", batRB2D.velocity.y);
                if (batHealth <= 0f)
                {
                     isMoving = false;

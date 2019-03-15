@@ -30,7 +30,7 @@ public class TrollController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         int trollKills = PlayerPrefs.GetInt("cyclops_deaths", 15);
+         int trollKills = PlayerPrefs.GetInt("troll_deaths", 15);
          if (trollKills == 0)
          {
               trollRB2D = GetComponent<Rigidbody2D>();
