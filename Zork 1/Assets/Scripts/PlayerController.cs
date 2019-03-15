@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
               // add save here if we want to save every time we exit to main
               // not enabled currently so saving in a conscious player effort
               // also this way we don't save over something without player knowledge
-              SaveToMain.Save();
+              //SaveToMain.Save();
               SceneManager.LoadScene(mainMenuScene);
          }
 

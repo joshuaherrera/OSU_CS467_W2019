@@ -78,6 +78,7 @@ public class SaveManager : MonoBehaviour
             file.Close();
             //int is not keeping its count between scene loads
             //folderNameCount += 1;
+             PlayerPrefs.SetInt("saved_game", 1);
 
         }
         catch (System.Exception e)

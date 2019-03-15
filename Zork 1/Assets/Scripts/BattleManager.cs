@@ -418,6 +418,7 @@ public class BattleManager : MonoBehaviour
 	{
 		isActive = false;
 		uiButtons.SetActive(false);
+	     int lastScene = SceneManager.GetActiveScene().buildIndex;
 
 		yield return new WaitForSeconds(.5f);
 
@@ -451,13 +452,13 @@ public class BattleManager : MonoBehaviour
 			else if (batPresent == 1)
 			{
 				Bat.batDeath = true;
-				batPresent = 0;
+                    batPresent = 0;
 			}
 
 			else if (cyclopsPresent == 1)
 			{
 				Cyclops.cyclopsDeath = true;
-				cyclopsPresent = 0;
+                    cyclopsPresent = 0;
 
 			}
 
@@ -469,6 +470,8 @@ public class BattleManager : MonoBehaviour
 			isActive = false;
 			PlayerController.instance.canMove = true;
 			textIn.Select();
+		     SceneManager.LoadScene(lastScene);
+
 		}
 	}
 
@@ -490,17 +493,20 @@ public class BattleManager : MonoBehaviour
 		if (enemyType == 1)
 		{
 			Troll.trollDeath = true;
- 		}
+		     PlayerPrefs.SetInt("troll_deaths", 1);
+          }
 
 		if (enemyType == 2)
 		{
 			Bat.batDeath = true;
-		}
+		     PlayerPrefs.SetInt("bat_deaths", 1);
+          }
 
 		if (enemyType == 3)
 		{
 			Cyclops.cyclopsDeath = true;
-		}
+		     PlayerPrefs.SetInt("cyclops_deaths", 1);
+          }
 	}
 
 }
