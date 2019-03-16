@@ -40,6 +40,7 @@ public class BattleManager : MonoBehaviour
 	public int trollDead = 0, batDead = 0, cyclopsDead = 0;
 	public int trollPresent = 0, batPresent = 0, cyclopsPresent = 0;
 
+     public string GameOverScene;
 	//public PlayerLoader loadPlayer;
 	//public PlayerController thePlayer;
     // Start is called before the first frame update
@@ -485,7 +486,7 @@ public class BattleManager : MonoBehaviour
 	//	UIFade.instance.FadeToBlack();
 		yield return new WaitForSeconds(1.5f);
 		battleScene.SetActive(false);
-		//SceneManager.LoadScene(GameOver_Bad);
+		SceneManager.LoadScene(GameOverScene);
 	}
 
 	public void KillEnemy()
