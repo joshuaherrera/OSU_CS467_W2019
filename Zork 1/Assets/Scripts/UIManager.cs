@@ -40,4 +40,10 @@ public class UIManager : MonoBehaviour
             clickable.MyIcon.color = new Color(0, 0, 0, 0); //hide icon
         }
     }
+    //open and close anything
+    public void OpenClose(CanvasGroup canvasGroup)
+    {
+        canvasGroup.alpha = canvasGroup.alpha > 0 ? 0 : 1;
+        canvasGroup.blocksRaycasts = canvasGroup.blocksRaycasts == true ? false : true;
+    }
 }

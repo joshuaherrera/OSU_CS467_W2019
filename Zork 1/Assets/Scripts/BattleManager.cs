@@ -485,7 +485,7 @@ public class BattleManager : MonoBehaviour
 	//	UIFade.instance.FadeToBlack();
 		yield return new WaitForSeconds(1.5f);
 		battleScene.SetActive(false);
-		SceneManager.LoadScene(GameOver_Bad);
+		//SceneManager.LoadScene(GameOver_Bad);
 	}
 
 	public void KillEnemy()

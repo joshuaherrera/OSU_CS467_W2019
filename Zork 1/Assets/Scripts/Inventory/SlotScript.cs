@@ -104,12 +104,12 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         {
             UseItem();
         }
-        /*
+        
         if (eventData.button == PointerEventData.InputButton.Left)
         {
-           RemoveItem();
+           HandScript.MyInstance.TakeMoveable(MyItem as IMoveable);
         }
-        */
+        
     }
 
     public void UseItem()
