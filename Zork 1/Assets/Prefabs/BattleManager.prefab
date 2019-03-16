@@ -211,6 +211,7 @@ MonoBehaviour:
   trollPresent: 1
   batPresent: 0
   cyclopsPresent: 0
+  GameOverScene: GameOver_Bad
 --- !u!1 &2377173047002677544
 GameObject:
   m_ObjectHideFlags: 0
