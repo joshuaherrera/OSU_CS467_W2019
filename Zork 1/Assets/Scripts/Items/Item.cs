@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Item : ScriptableObject
+public abstract class Item : ScriptableObject, IMoveable
 {
     [SerializeField]
     private Sprite icon; //all children of this superclass must have an icon
@@ -19,7 +19,7 @@ public abstract class Item : ScriptableObject
     {
         get => icon;
     }
-    public int Stacksize
+    public int MyStackSize
     {
         get => stacksize;
     }
