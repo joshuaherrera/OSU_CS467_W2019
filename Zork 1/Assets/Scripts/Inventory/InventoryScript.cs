@@ -64,7 +64,23 @@ public class InventoryScript : MonoBehaviour
 
         //set;
     }
-    
+
+    public SlotScript FromSlot
+    {
+        get
+        {
+            return fromSlot;
+        }
+        set
+        {
+            fromSlot = value;
+            if (value != null)
+            {
+                fromSlot.MyIcon.color = Color.grey;
+            }
+        }
+}
+
     /*
     public int MyTotalSlotCount
     {
