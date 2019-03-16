@@ -43,7 +43,10 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
     //added refernce to bagscript slot belongs to
     public BagScript MyBag {get; set;}
 
-    public int MySlotIndex { get; set; }
+    public int MySlotIndex
+    {
+        get; set;
+    }
 
     public bool IsEmpty
     {
@@ -122,8 +125,14 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         if(!IsEmpty)
         {
             MyItems.Pop();
-            //look for video to make MyInstance
-            //UIManager.MyInstance.UpdateStackSize(this);
+        }
+    }
+
+    public void Clear()
+    {
+        if (items.Count > 0)
+        {
+            items.Clear();
         }
     }
 

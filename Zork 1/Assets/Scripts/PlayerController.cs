@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
      public SaveManager SaveToMain;
 
      public bool canMove = true;
+    //used to interact with the chest
+    private IInteractable interactable;
 
      // Start is called before the first frame update
     void Start()
@@ -68,5 +70,36 @@ public class PlayerController : MonoBehaviour
               SceneManager.LoadScene(mainMenuScene);
          }
 
+    }
+
+    public void Interact()
+    {
+        if (interactable != null)
+        {
+            interactable.Interact();
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Interactable")
+        {
+            interactable = collision.GetComponent<IInteractable>();
+            Interact();//chest opens automatically when close enough
+        }
+    }
+    //occurs when walking away from chest
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Interactable")
+        {
+            if (interactable != null)
+            {
+                interactable.StopInteract();
+                interactable = null;
+                //do a check to see if all items collected, if so
+                //display victory screen
+            }
+        }
     }
 }

@@ -37,6 +37,24 @@ public class BagScript : MonoBehaviour
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
+    public List<Item> GetItems()
+    {
+        List<Item> items = new List<Item>();
+
+        foreach (SlotScript slot in slots)
+        {
+            if (!slot.IsEmpty)
+            {
+                foreach (Item item in slot.MyItems)
+                {
+                    items.Add(item);
+                }
+            }
+        }
+
+        return items;
+    }
+
     //makes slots for bag
     public void AddSlots(int slotCount)
     {
@@ -103,5 +121,13 @@ public class BagScript : MonoBehaviour
         canvasGroup.alpha = canvasGroup.alpha > 0 ? 0 : 1; //shown: 1, hidden: 0
         canvasGroup.blocksRaycasts = canvasGroup.blocksRaycasts == true ? false : true; //similar logic
         bag.Clicked = bag.Clicked == true ? false : true;
+    }
+
+    public void Clear()
+    {
+        foreach (SlotScript slot in slots)
+        {
+            slot.Clear();
+        }
     }
 }

@@ -8,11 +8,14 @@ public class SaveData
 {
     public PlayerData MyPlayerData { get; set; }
 
+    public List<ChestData> MyChestData { get; set; }
+
     public InventoryData MyInventoryData { get; set; }
 
     public SaveData()
     {
         //constructor, setsup game
+        MyChestData = new List<ChestData>();
         MyInventoryData = new InventoryData();
     }
 }
@@ -53,6 +56,19 @@ public class ItemData
         MyTitle = title;
         MySlotIdx = idx;
         MyBagIdx = bagIdx;
+    }
+}
+
+[Serializable]
+public class ChestData
+{
+    public string MyName { get; set; }
+    public List<ItemData> MyItems { get; set; }
+
+    public ChestData(string name)
+    {
+        MyName = name;
+        MyItems = new List<ItemData>();
     }
 }
 

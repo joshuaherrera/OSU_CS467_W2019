@@ -30,10 +30,12 @@ public class SaveManager : MonoBehaviour
         }
     }
 
+    private Chest[] chests;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        //Debug.Log(Application.persistentDataPath);
+        chests = FindObjectsOfType<Chest>();
     }
 
     // Update is called once per frame
@@ -70,7 +72,9 @@ public class SaveManager : MonoBehaviour
             Debug.Log("Before calling save()");
             SaveBags(data);
             SaveInventory(data);
+            SaveChests(data);
             SavePlayer(data);
+            
             Debug.Log("After calling save()");
 
             bf.Serialize(file, data);
@@ -84,7 +88,8 @@ public class SaveManager : MonoBehaviour
         catch (System.Exception e)
         {
             //delete savegame if corrupted
-            Debug.LogError(e.Message);
+            //Debug.LogError(e);
+            throw;
         }
     }
 
@@ -113,6 +118,22 @@ public class SaveManager : MonoBehaviour
         data.MyPlayerData.DirX = posx;
         data.MyPlayerData.DirY = posy;
         
+    }
+
+    public void SaveChests(SaveData data)
+    {
+        for (int i = 0; i < chests.Length; i++)
+        {
+            data.MyChestData.Add(new ChestData(chests[i].name));
+
+            foreach (Item item in chests[i].MyItems)
+            {
+                if (chests[i].MyItems.Count > 0)
+                {
+                    data.MyChestData[i].MyItems.Add(new ItemData(item.MyTitle, item.MySlot.MySlotIndex));
+                }
+            }
+        }
     }
 
     public void SaveBags(SaveData data)
@@ -157,12 +178,17 @@ public class SaveManager : MonoBehaviour
 
             LoadInventory(data);
 
+            LoadChests(data);
+
             LoadPlayer(data);
+
+            
         }
         catch (System.Exception e)
         {
             //delete savegame if corrupted
-            Debug.LogError(e.Message);
+            //Debug.LogError(e);
+            throw;
         }
     }
 
@@ -178,6 +204,21 @@ public class SaveManager : MonoBehaviour
         PlayerController.instance.transform.position = (Vector3)oldData;
         PlayerController.instance.myAnim.SetFloat("lastMoveX", data.MyPlayerData.DirX);
         PlayerController.instance.myAnim.SetFloat("lastMoveY", data.MyPlayerData.DirY);
+    }
+
+    public void LoadChests(SaveData data)
+    {
+        foreach (ChestData chest in data.MyChestData)
+        {
+            Chest c = Array.Find(chests, x => x.name == chest.MyName);
+
+            foreach (ItemData itemData in chest.MyItems)
+            {
+                Item item = Array.Find(items, x => x.MyTitle == itemData.MyTitle);
+                item.MySlot = c.MyBag.MySlots.Find(x => x.MySlotIndex == itemData.MySlotIdx);
+                c.MyItems.Add(item);
+            }
+        }
     }
 
     //always have one bag. loads empty bags. need another fcn to load 

@@ -37,8 +37,8 @@ public class UIManager : MonoBehaviour
     {
         if (clickable.MyCount > 1)
         {
-            clickable.MyStackText.text = clickable.MyCount.ToString(); //set amount of items to string to display
-            clickable.MyStackText.color = Color.white;
+            //clickable.MyStackText.text = clickable.MyCount.ToString(); //set amount of items to string to display
+            //clickable.MyStackText.color = Color.white;
             clickable.MyIcon.color = Color.white;
         }
         else
