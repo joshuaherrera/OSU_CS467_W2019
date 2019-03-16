@@ -57,7 +57,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
     {
         get
         {
-            if (IsEmpty)
+            if (IsEmpty || MyCount < MyItem.MyStackSize)
             {
                 return false;
             }
@@ -147,7 +147,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
             //if holding something
             else if (InventoryScript.MyInstance.FromSlot != null)
             {
-                if (PutItemBack() || MoveItem(InventoryScript.MyInstance.FromSlot.MyItems))
+                if (PutItemBack() || SwapItems(InventoryScript.MyInstance.FromSlot) ||AddItems(InventoryScript.MyInstance.FromSlot.MyItems))
                 {
                     HandScript.MyInstance.Drop();
                     InventoryScript.MyInstance.FromSlot = null;
@@ -176,9 +176,9 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         return false;
     }
 
-    public bool MoveItem(ObservableStack<Item> newItems)
+    public bool AddItems(ObservableStack<Item> newItems)
     {
-        if (IsEmpty)
+        if (IsEmpty || newItems.Peek().GetType() == MyItem.GetType())
         {
             int count = newItems.Count;
             //check if curr slot full
@@ -195,7 +195,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         return false;
     }
     /// <summary>
-    /// TO DO IS THIS!!!!!!!!!!!!!!!!!!!!!
+    /// TO DO IS THIS!!!!!!!!!!!!!!!!!!!!! video 11.9 11:44 minutes
     /// </summary>
     /// <param name="from"></param>
     /// <returns></returns>
@@ -205,9 +205,18 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         {
             return false;
         }
-        if (from.MyCount.GetType() != MyItem.GetType())
+        if (from.MyItem.GetType() != MyItem.GetType() || from.MyCount+MyCount > MyItem.MyStackSize)
         {
-
+            //copy all items we need to swap from A
+            ObservableStack<Item> tmpFrom = new ObservableStack<Item>(from.items);
+            //clear slot A to replace with B
+            from.items.Clear();
+            //take from B into A
+            from.AddItems(items);
+            //do the inverse
+            items.Clear();
+            AddItems(tmpFrom);
+            return true;
         }
         return false;
     }
