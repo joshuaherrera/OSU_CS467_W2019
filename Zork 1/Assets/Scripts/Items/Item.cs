@@ -19,7 +19,7 @@ public abstract class Item : ScriptableObject, IMoveable
     {
         get => icon;
     }
-    public int Stacksize
+    public int MyStackSize
     {
         get => stacksize;
     }

@@ -24,12 +24,21 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         }
     }
 
+    private void Awake()
+    {
+        items.OnPop += new UpdateStackEvent(UpdateSlot);
+        items.OnPush += new UpdateStackEvent(UpdateSlot);
+        items.OnClear += new UpdateStackEvent(UpdateSlot);
+    }
+
     //probably need to save this
     //used if want to stack items in one slot
-    private Stack<Item> items = new Stack<Item>();
+    private ObservableStack<Item> items = new ObservableStack<Item>();
 
     [SerializeField]
     private Image icon;
+    [SerializeField]
+    private Text stackSize;
 
     //added refernce to bagscript slot belongs to
     public BagScript MyBag {get; set;}
@@ -41,6 +50,18 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         get
         {
             return MyItems.Count == 0;
+        }
+    }
+
+    public bool IsFull
+    {
+        get
+        {
+            if (IsEmpty)
+            {
+                return false;
+            }
+            return true;
         }
     }
 
@@ -66,7 +87,18 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
     {
         get => MyItems.Count;
     }
-    public Stack<Item> MyItems { get => items; set => items = value; }
+    public ObservableStack<Item> MyItems
+    {
+        get => items; set => items = value;
+    }
+
+    public Text MyStackText
+    {
+        get
+        {
+            return stackSize;
+        }
+}
 
     //end interface
     public bool AddItem(Item item)
@@ -91,7 +123,7 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         {
             MyItems.Pop();
             //look for video to make MyInstance
-            UIManager.MyInstance.UpdateStackSize(this);
+            //UIManager.MyInstance.UpdateStackSize(this);
         }
     }
 
@@ -115,9 +147,10 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
             //if holding something
             else if (InventoryScript.MyInstance.FromSlot != null)
             {
-                if (true)
+                if (PutItemBack() || MoveItem(InventoryScript.MyInstance.FromSlot.MyItems))
                 {
                     HandScript.MyInstance.Drop();
+                    InventoryScript.MyInstance.FromSlot = null;
                 }
             }
         }
@@ -130,5 +163,68 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler, IClickable
         {
             (MyItem as IUseable).Use();
         }
+    }
+
+    public bool PutItemBack()
+    {
+        //we picked it up and try to put it back
+        if (InventoryScript.MyInstance.FromSlot == this)
+        {
+            InventoryScript.MyInstance.FromSlot.MyIcon.color = Color.white;
+            return true;
+        }
+        return false;
+    }
+
+    public bool MoveItem(ObservableStack<Item> newItems)
+    {
+        if (IsEmpty)
+        {
+            int count = newItems.Count;
+            //check if curr slot full
+            for (int i = 0; i < count; i++)
+            {
+                if (IsFull)
+                {
+                    return false;
+                }
+                AddItem(newItems.Pop());
+            }
+            return true;
+        }
+        return false;
+    }
+    /// <summary>
+    /// TO DO IS THIS!!!!!!!!!!!!!!!!!!!!!
+    /// </summary>
+    /// <param name="from"></param>
+    /// <returns></returns>
+    public bool SwapItems(SlotScript from)
+    {
+        if (IsEmpty)
+        {
+            return false;
+        }
+        if (from.MyCount.GetType() != MyItem.GetType())
+        {
+
+        }
+        return false;
+    }
+
+    public bool StackItem(Item item)
+    {
+        if (!IsEmpty && item.name == MyItem.name && items.Count < MyItem.MyStackSize)
+        {
+            items.Push(item);
+            item.MySlot = this;
+            return true;
+        }
+        return false;
+
+    }
+    private void UpdateSlot()
+    {
+        UIManager.MyInstance.UpdateStackSize(this);
     }
 }

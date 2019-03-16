@@ -142,14 +142,14 @@ public class InventoryScript : MonoBehaviour
     //debug
     private void Update()
     {
-        /*
+        
         if (Input.GetKeyDown(KeyCode.L))
         {
             //could I call this on collision?
             /*
             Bag bag = (Bag)Instantiate(items[0]);
             bag.Initialize(16);
-            bag.Use();*\/
+            bag.Use();*/
             //instantiate uses the specified array to make a copy
             //of the object specified.
             //scene view shows weve stored a leaflet item at pos
@@ -163,7 +163,7 @@ public class InventoryScript : MonoBehaviour
             /*
             Bag bag = (Bag)Instantiate(items[0]);
             bag.Initialize(16);
-            bag.Use();*\/
+            bag.Use();*/
             //instantiate uses the specified array to make a copy
             //of the object specified.
             //scene view shows weve stored a leaflet item at pos
@@ -171,7 +171,7 @@ public class InventoryScript : MonoBehaviour
             Egg egg = (Egg)Instantiate(items[2]);
             AddItem(egg);
         }
-        */
+        
         //test to see if can close bag so I can know if
         //bag is not working or just not receiving input
         /*
@@ -182,7 +182,8 @@ public class InventoryScript : MonoBehaviour
         */
     }
     //end debuggging
-
+    
+    /*** OLD
     public void AddItem(Item item)
     {
         //checks each available bag. Curr using one bag
@@ -193,6 +194,19 @@ public class InventoryScript : MonoBehaviour
                 return;
             }
         }
+    }
+    */
+
+    public void AddItem(Item item)
+    {
+        if (item.MyStackSize > 0)
+        {
+            if (PlaceInStack(item))
+            {
+                return;
+            }
+        }
+        PlaceInEmpty(item);
     }
 
     public void AddBag(Bag bag)
@@ -245,5 +259,31 @@ public class InventoryScript : MonoBehaviour
             }
         }
         return slots;
+    }
+
+    private void PlaceInEmpty(Item item)
+    {
+        foreach (Bag bag in bags)
+        {
+            if (bag.MyBagScript.AddItem(item))
+            {
+                return;
+            }
+        }
+    }
+
+    private bool PlaceInStack(Item item)
+    {
+        foreach (Bag bag in bags)
+        {
+            foreach (SlotScript slots in bag.MyBagScript.MySlots)
+            {
+                if (slots.StackItem(item))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

@@ -21,7 +21,7 @@ public class BagScript : MonoBehaviour
         }
     }
 
-    public List<SlotScript> MySlots { get => slots; set => slots = value; }
+    public List<SlotScript> MySlots { get => slots;}
 
     [SerializeField]
     private GameObject slotPrefab;
